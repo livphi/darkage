@@ -49,10 +49,11 @@ minetest.register_craftitem("darkage:iron_stick", {
 ----------
 
 minetest.register_craft({
+	type = "shapeless",
 	output = "darkage:adobe 4",
 	recipe = {
-		{"default:sand",		"default:sand"},
-		{"default:clay_lump",	"farming:straw"},
+		"default:sand",	"default:sand",
+		"default:clay",	"farming:straw"
 	}
 })
 
@@ -66,10 +67,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "darkage:basalt_rubble 4",
+	type = "shapeless",
+	output = "darkage:basalt_rubble 2",
 	recipe = {
-		{"default:cobble",		"default:cobble"},
-		{"default:coal_lump",	"default:coal_lump"},
+		"default:cobble",	"default:cobble",
+		"default:coal_lump"
 	}
 })
 
@@ -90,6 +92,14 @@ minetest.register_craft({
 	}
 })
 
+core.register_craft({
+	output = "darkage:chalk",
+	recipe = {
+		{"darkage:chalk_powder", "darkage:chalk_powder"},
+		{"darkage:chalk_powder", "darkage:chalk_powder"},
+	}
+})
+
 minetest.register_craft({
 	output = "darkage:cobble_with_plaster 2",
 	recipe = {
@@ -103,6 +113,15 @@ minetest.register_craft({
 	recipe = {
 		{"darkage:chalk_powder", "default:cobble"},
 		{"darkage:chalk_powder", "default:cobble"},
+	}
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "darkage:chalked_bricks 2",
+	recipe = {
+		"default:stonebrick",	"default:stonebrick",
+		"darkage:chalk_powder"
 	}
 })
 
@@ -163,10 +182,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "darkage:mud 3",
+	type = "shapeless",
+	output = "darkage:mud 4",
 	recipe = {
-		{"default:dirt",		"default:dirt"},
-		{"default:clay_lump",	"darkage:silt_lump"},
+		"default:clay", "default:clay",
+		"default:sand", "darkage:silt"
 	}
 })
 
@@ -179,7 +199,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "darkage:marble_tile 2",
+	output = "darkage:marble_tile 4",
 	recipe = {
 		{"darkage:marble", "darkage:marble"},
 		{"darkage:marble", "darkage:marble"},
@@ -197,10 +217,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "darkage:ors 4",
+	output = "darkage:ors 8",
 	recipe = {
-		{"default:sandstone", "default:sandstone"},
-		{"default:iron_lump", "default:sandstone"},
+		{"default:sandstone", "default:sandstone", "default:sandstone"},
+		{"default:sandstone", "default:sandstone", "default:sandstone"},
+		{"default:sandstone", "default:sandstone", "default:iron_lump"},
 	}
 })
 minetest.register_craft({
@@ -221,10 +242,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "darkage:silt 3",
+	type = "shapeless",
+	output = "darkage:silt 4",
 	recipe = {
-		{"default:sand",		"default:sand"},
-		{"default:clay_lump",	"default:clay_lump"},
+		"default:sand",		"default:sand",
+		"default:sand",		"default:clay",
 	}
 })
 
@@ -263,7 +285,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "darkage:slate_tile 2",
+	output = "darkage:slate_tile 4",
 	recipe = {
 		{"darkage:slate_brick", "darkage:slate_brick"},
 		{"darkage:slate_brick", "darkage:slate_brick"},
@@ -271,15 +293,16 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "darkage:stone_brick",
+	output = "darkage:stone_brick 4",
 	recipe = {
-		{"default:stone_block"},
+		{"default:stone_block", "default:stone_block"},
+		{"default:stone_block", "default:stone_block"},
 	}
 })
 
 
 minetest.register_craft({
-	output = "darkage:straw_bale",
+	output = "darkage:straw_bale 4",
 	recipe = {
 		{"farming:straw","farming:straw"},
 		{"farming:straw","farming:straw"},
@@ -337,7 +360,7 @@ minetest.register_craft({
 
 -- Tuff
 minetest.register_craft({
-	output = "darkage:tuff 2",
+	output = "darkage:tuff 4",
 	recipe = {
 		{"darkage:gneiss", "default:stone"},
 		{"default:stone", "darkage:gneiss"},
@@ -366,7 +389,7 @@ minetest.register_craft({
 
 -- Rhyolitic Tuff
 minetest.register_craft({
-	output = "darkage:rhyolitic_tuff 2",
+	output = "darkage:rhyolitic_tuff 4",
 	recipe = {
 		{"darkage:gneiss", "default:desert_stone"},
 		{"default:desert_stone", "darkage:gneiss"},

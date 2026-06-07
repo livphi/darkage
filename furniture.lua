@@ -212,52 +212,46 @@ minetest.register_craft({
 	recipe = {
 		{"darkage:iron_stick"},
 		{"darkage:iron_stick"},
-		{"darkage:iron_stick"},
 	}
 })
 
 minetest.register_craft({
-	output = "darkage:iron_bars 2",
+	output = "darkage:iron_bars 4",
 	recipe = {
-		{"darkage:iron_stick", "", "darkage:iron_stick"},
-		{"darkage:iron_stick", "", "darkage:iron_stick"},
-		{"darkage:iron_stick", "", "darkage:iron_stick"},
+		{"darkage:iron_stick", "darkage:iron_stick", "darkage:iron_stick"},
+		{"darkage:iron_stick", "darkage:iron_stick", "darkage:iron_stick"},
 	}
 })
 
 minetest.register_craft({
-	output = "darkage:iron_grille 3",
+	output = "darkage:iron_grille",
 	recipe = {
-    {"",					"darkage:iron_bars",	""},
-    {"darkage:iron_bars",	"",						"darkage:iron_bars"},
-    {"",					"darkage:iron_bars",	""},
+		{"darkage:iron_bars",	""},
+		{"",					"darkage:iron_bars"},
 	}
 })
 
 minetest.register_craft({
 	output = "darkage:lamp",
 	recipe = {
-		{"group:stick",	"",				 "group:stick"},
-		{"",			"default:torch", ""},
-		{"group:stick",	"",				 "group:stick"},
+		{"darkage:wood_frame"},
+		{"default:torch"}
 	}
 })
 
 minetest.register_craft({
-	output = "darkage:wood_bars 2",
+	output = "darkage:wood_bars 4",
 	recipe = {
-    {"group:stick", "", "group:stick"},
-    {"group:stick", "", "group:stick"},
-    {"group:stick", "", "group:stick"},
+		{"group:stick", "group:stick", "group:stick"},
+		{"group:stick", "group:stick", "group:stick"},
 	}
 })
 
 minetest.register_craft({
-	output = "darkage:wood_grille 3",
+	output = "darkage:wood_grille",
 	recipe = {
-		{"",					"darkage:wood_bars", ""},
-		{"darkage:wood_bars",	"",					 "darkage:wood_bars"},
-		{"",					"darkage:wood_bars", ""},
+		{"darkage:wood_bars",	""},
+		{"",					"darkage:wood_bars"},
 	}
 })
 

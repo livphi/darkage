@@ -38,7 +38,7 @@ function darkage.register_reinforce(name, craftItem, nodedef)
 	minetest.register_node(reinforced_tname, reinforced)
 
 	minetest.register_craft({
-		output = reinforced_tname,
+		output = reinforced_tname .. " 4",
 		recipe = {
 			{"group:stick",	craftItem, 		"group:stick"},
 			{craftItem,		"group:stick", 	craftItem},
@@ -69,20 +69,20 @@ function darkage.register_reinforce(name, craftItem, nodedef)
 	minetest.register_node(slope_tname, slope)
 
 	minetest.register_craft({
-		output = slope_tname,
+		output = slope_tname .. " 4",
 		recipe = {
-			{craftItem,		craftItem,		"group:stick"},
+			{"",			craftItem,		"group:stick"},
 			{craftItem,		"group:stick",	craftItem},
-			{"group:stick",	craftItem,		craftItem},
+			{"group:stick",	craftItem,		""},
 		}
 	})
 	-- Flipped recipe
 	minetest.register_craft({
-		output = slope_tname,
+		output = slope_tname .. " 4",
 		recipe = {
-			{"group:stick",	craftItem,		craftItem},
+			{"group:stick",	craftItem,		""},
 			{craftItem,		"group:stick",	craftItem},
-			{craftItem,		craftItem,		"group:stick"},
+			{"",			craftItem,		"group:stick"},
 		}
 	})
 	-- Recycling
@@ -112,7 +112,7 @@ function darkage.register_reinforce(name, craftItem, nodedef)
 	minetest.register_node(arrow_tname, arrow)
 
 	minetest.register_craft({
-		output = arrow_tname,
+		output = arrow_tname .. " 4",
 		recipe = {
 			{craftItem, 	"group:stick",	craftItem},
 			{"group:stick",	 craftItem, 	"group:stick"},
@@ -137,11 +137,11 @@ function darkage.register_reinforce(name, craftItem, nodedef)
 	minetest.register_node(bars_tname, bars)
 
 	minetest.register_craft({
-		output = bars_tname,
+		output = bars_tname .. " 4",
 		recipe = {
+			{"group:stick", "", "group:stick"},
 			{"group:stick", craftItem, "group:stick"},
-			{"group:stick", craftItem, "group:stick"},
-			{"group:stick", craftItem, "group:stick"},
+			{craftItem, craftItem, craftItem},
 		}
 	})
 	minetest.register_craft({
@@ -152,7 +152,7 @@ function darkage.register_reinforce(name, craftItem, nodedef)
 	})
 end
 
-darkage.register_reinforce("Chalk", "darkage:chalk_powder", {
+darkage.register_reinforce("Chalk", "darkage:chalk", {
 	tiles = {"darkage_chalk.png"},
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults()

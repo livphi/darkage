@@ -20,11 +20,11 @@ minetest.register_node("darkage:glass", {
 })
 
 minetest.register_craft({
-	output = "darkage:glass 8",
+	output = "darkage:glass 4",
 	recipe = {
-		{"default:glass", "default:steel_ingot", "default:glass"},
-		{"default:steel_ingot", "default:glass", "default:steel_ingot"},
-		{"default:glass", "default:steel_ingot", "default:glass"},
+		{"default:glass", "darkage:iron_stick", "default:glass"},
+		{"darkage:iron_stick", "", "darkage:iron_stick"},
+		{"default:glass", "darkage:iron_stick", "default:glass"},
 	}
 })
 
@@ -40,11 +40,11 @@ minetest.register_node("darkage:glass_round", {
 })
 
 minetest.register_craft({
-	output = "darkage:glass_round 8",
+	output = "darkage:glass_round 4",
 	recipe = {
-		{"default:steel_ingot", "default:glass", "default:steel_ingot"},
-		{"default:glass", "default:glass", "default:glass"},
-		{"default:steel_ingot", "default:glass", "default:steel_ingot"},
+		{"darkage:iron_stick", "default:glass", "darkage:iron_stick"},
+		{"default:glass", "", "default:glass"},
+		{"darkage:iron_stick", "default:glass", "darkage:iron_stick"},
 	}
 })
 
@@ -62,11 +62,11 @@ minetest.register_node("darkage:glass_square", {
 })
 
 minetest.register_craft({
-	output = "darkage:glass_square 8",
+	output = "darkage:glass_square 4",
 	recipe = {
-		{"default:glass", "default:steel_ingot", "default:glass"},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-		{"default:glass", "default:steel_ingot", "default:glass"},
+		{"default:glass", "default:glass", "darkage:iron_stick"},
+		{"default:glass", "default:glass", "darkage:iron_stick"},
+		{"darkage:iron_stick", "darkage:iron_stick", ""},
 	}
 })
 

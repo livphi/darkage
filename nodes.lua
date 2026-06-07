@@ -70,7 +70,7 @@ minetest.register_node("darkage:chalk", {
 	description = "Chalk",
 	tiles = {"darkage_chalk.png"},
 	is_ground_content = true,
-	drop = 'darkage:chalk_powder 2',
+	drop = 'darkage:chalk_powder 4',
 	groups = {crumbly=2, cracky=2, not_cuttable=1},
 	sounds = default.node_sound_stone_defaults()
 })
@@ -457,13 +457,4 @@ minetest.register_node("darkage:chalked_bricks", {
 	is_ground_content = false,
 	groups = {cracky = 2, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_craft({
-	output = "darkage:chalked_bricks 4",
-	recipe = {
-		{"default:stone", 			"default:stone",		"darkage:chalk_powder"},
-		{"darkage:chalk_powder",	"darkage:chalk_powder", "darkage:chalk_powder"},
-		{"default:stone",			"darkage:chalk_powder", "default:stone"},
-	}
 })
