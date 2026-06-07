@@ -195,7 +195,7 @@ minetest.register_node("darkage:wood_frame", {
 
 
 ----------
--- Crafts 
+-- Crafts
 ----------
 
 minetest.register_craft({

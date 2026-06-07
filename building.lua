@@ -10,7 +10,7 @@
 	<modname>:reinforced_<name>_arrow
 	<modname>:reinforced_<name>_bars
 
-	The modname is automatically the mod that currently calls this function. 
+	The modname is automatically the mod that currently calls this function.
 	e.g. if you call darkage.register_reinforce from the mod medieval modname will be medieval
 ]]
 function darkage.register_reinforce(name, craftItem, nodedef)
@@ -19,7 +19,7 @@ function darkage.register_reinforce(name, craftItem, nodedef)
 
 	if nodedef.groups then
 		nodedef.groups["not_cuttable"] = 1;
-	else 
+	else
 		nodedef.groups = {};
 		nodedef.groups["not_cuttable"] = 1;
 	end
@@ -63,7 +63,7 @@ function darkage.register_reinforce(name, craftItem, nodedef)
 			"^darkage_reinforce_left.png" , "^darkage_reinforce_left.png"} -- front, back
 	for i=1,6 do
 		local tile = slope.tiles[i] or nodedef.tiles[1]; -- There have to be at least one tile.
-		slope.tiles[i] = tile ..slope_tile_extend[i]	
+		slope.tiles[i] = tile ..slope_tile_extend[i]
 	end
 
 	minetest.register_node(slope_tname, slope)

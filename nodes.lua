@@ -77,8 +77,8 @@ minetest.register_node("darkage:chalk", {
 
 minetest.register_node("darkage:cobble_with_plaster", {
 	description = "Cobblestone with Plaster",
-	tiles = {"darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_D.png)", "darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_B.png)", 
-		"darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_C.png)", "darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_A.png)", 
+	tiles = {"darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_D.png)", "darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_B.png)",
+		"darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_C.png)", "darkage_chalk.png^(default_cobble.png^[mask:darkage_plaster_mask_A.png)",
 		"default_cobble.png", "darkage_chalk.png"},
 	is_ground_content = false,
 	paramtype2 = "facedir",
@@ -89,8 +89,8 @@ minetest.register_node("darkage:cobble_with_plaster", {
 
 minetest.register_node("darkage:chalked_bricks_with_plaster", {
 	description = "Chalked Bricks with Plaster",
-	tiles = {"darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_D.png)", "darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_B.png)", 
-		"darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_C.png)", "darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_A.png)", 
+	tiles = {"darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_D.png)", "darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_B.png)",
+		"darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_C.png)", "darkage_chalk.png^(darkage_chalked_bricks.png^[mask:darkage_plaster_mask_A.png)",
 		"darkage_chalked_bricks.png", "darkage_chalk.png"},
 	is_ground_content = false,
 	paramtype2 = "facedir",
@@ -450,7 +450,7 @@ minetest.register_node("darkage:rhyolitic_tuff_rubble", {
 --[[
 	add a node using the cobble texture that was introduced in minetest 0.4.dev-20120408 and got removed in 0.4.7
 	It has a nice contrast together the stone bricks, so I think it could get usefull.
-]] 
+]]
 minetest.register_node("darkage:chalked_bricks", {
 	description = "Chalked Brick",
 	tiles = {"darkage_chalked_bricks.png"},
