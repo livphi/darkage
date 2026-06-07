@@ -176,7 +176,7 @@ minetest.register_node("darkage:gneiss_block", {
 	Marble
 ]]
 minetest.register_node("darkage:marble", {
-	description = "Marble",
+	description = "White Marble",
 	tiles = {"darkage_marble.png"},
 	is_ground_content = true,
 	groups = {cracky = 3, stone = 1},
@@ -184,7 +184,7 @@ minetest.register_node("darkage:marble", {
 })
 
 minetest.register_node("darkage:marble_tile", {
-	description = "Marble Tile",
+	description = "White Marble Tile",
 	tiles = {"darkage_marble_tile.png"},
 	is_ground_content = false,
 	groups = {cracky=2},
@@ -192,7 +192,7 @@ minetest.register_node("darkage:marble_tile", {
 })
 
 minetest.register_node("darkage:mud", {
-	description = "Mud",
+	description = "Clay Loam",
 	tiles = {"darkage_mud_up.png","darkage_mud.png"},
 	is_ground_content = true,
 	groups = {crumbly=3},
@@ -321,7 +321,7 @@ minetest.register_node("darkage:slate_brick", {
 minetest.register_alias("darkage:straw", "farming:straw")
 
 minetest.register_node("darkage:stone_brick", {
-	description = "Stone Brick",
+	description = "Stone Block Brick",
 	tiles = {"darkage_stone_brick.png"},
 	is_ground_content = false,
 	groups = {cracky=3},

@@ -29,7 +29,7 @@ minetest.register_craftitem("darkage:chalk_powder", {
 })
 
 minetest.register_craftitem("darkage:mud_lump", {
-	description = "Mud Lump",
+	description = "Clay Loam Lump",
 	inventory_image = "darkage_mud_lump.png",
 })
 
